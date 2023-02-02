@@ -33,27 +33,27 @@ public class HiloPelota extends Thread{
 
 		zonaRebote.add(pelota);
 		try {
-			if(!stop) {
-				for (int i=1; i<=NUM_MOVIMIENTOS; i++){				
-					pelota.paint();	
-					//zonaRebote.paint(zonaRebote.getGraphics());//borrar y que paint sea llamado desde update o update desde un paint de pelota
-					try {
-						Thread.sleep(5);
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}	
-				}
-				zonaRebote.borrarPelota(pelota);
-			}
-			else {
+			if(stop) { 
 				wait();
 			}
+			for (int i=1; i<=NUM_MOVIMIENTOS; i++){				
+				pelota.paint();	
+				//zonaRebote.paint(zonaRebote.getGraphics());//borrar y que paint sea llamado desde update o update desde un paint de pelota
+				try {
+					Thread.sleep(5);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}	
+			}
+			
 		}
 		catch (Exception e) {
 			// TODO: handle exception
 		}
 		
+		zonaRebote.borrarPelota(pelota);
+		zonaRebote.actualizarPantalla();
 		
 		
 

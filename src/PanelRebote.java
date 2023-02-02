@@ -5,7 +5,7 @@ import java.awt.Graphics2D;
 import java.util.ArrayList;
 
 import javax.swing.JPanel;
-//L�mina que dibuja las pelotas----------------------------------------------------------------------
+//Lamina que dibuja las pelotas----------------------------------------------------------------------
 
 class PanelRebote extends JPanel{
 	
@@ -37,6 +37,10 @@ class PanelRebote extends JPanel{
 	public void borrarPelota(Pelota pelota) {
 		
 		pelotas.remove(pelota);
+		
+	}
+	public void actualizarPantalla() {
+		
 		
 	}
 	

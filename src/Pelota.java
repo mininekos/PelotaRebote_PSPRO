@@ -68,7 +68,7 @@ class Pelota {
 
 	}
 
-	// Forma de la pelota en su posición inicial
+	// Forma de la pelota en su posicion inicial
 
 	public Ellipse2D getForma() {
 

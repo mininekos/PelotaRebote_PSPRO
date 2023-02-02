@@ -38,7 +38,8 @@ class Ventana extends JFrame{
 		btnNuevaPelota.addActionListener( new ActionListener(){
 			
 			public void actionPerformed(ActionEvent evento){
-				new HiloPelota();
+				HiloPelota hilo = new HiloPelota(zonaRebote);
+				hilo.start();
 			}
 			
 		});

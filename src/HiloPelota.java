@@ -7,9 +7,10 @@ public class HiloPelota extends Thread{
 	private static final int NUM_MOVIMIENTOS = 1000;
 	private PanelRebote zonaRebote;
 
-	public HiloPelota() {
+	public HiloPelota(PanelRebote zonaRebote) {
 		super();
 		this.stop=false;
+		this.zonaRebote=zonaRebote;
 	}
 
 	public synchronized void reanudar(){
@@ -21,6 +22,7 @@ public class HiloPelota extends Thread{
         return stop;
     }
 
+    @Override
 	public synchronized void run() {		
 		lanzarJuego();
 	}
@@ -42,6 +44,7 @@ public class HiloPelota extends Thread{
 						e.printStackTrace();
 					}	
 				}
+				zonaRebote.borrarPelota(pelota);
 			}
 			else {
 				wait();
@@ -50,6 +53,8 @@ public class HiloPelota extends Thread{
 		catch (Exception e) {
 			// TODO: handle exception
 		}
+		
+		
 		
 
 }

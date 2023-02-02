@@ -5,7 +5,7 @@ import java.awt.Graphics2D;
 import java.util.ArrayList;
 
 import javax.swing.JPanel;
-//Lámina que dibuja las pelotas----------------------------------------------------------------------
+//Lï¿½mina que dibuja las pelotas----------------------------------------------------------------------
 
 class PanelRebote extends JPanel{
 	
@@ -26,10 +26,17 @@ class PanelRebote extends JPanel{
 		
 		Graphics2D g2=(Graphics2D)g;
 		
-		for(Pelota b: pelotas){
+		for(int i = 0; i < pelotas.size(); i++){
 			
-			g2.fill(b.getForma());
+			g2.fill(pelotas.get(i).getForma());
+			
 		}
+		
+	}
+	
+	public void borrarPelota(Pelota pelota) {
+		
+		pelotas.remove(pelota);
 		
 	}
 	

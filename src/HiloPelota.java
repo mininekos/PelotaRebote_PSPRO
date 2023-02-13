@@ -53,7 +53,7 @@ public class HiloPelota extends Thread{
 		}
 		
 		zonaRebote.borrarPelota(pelota);
-		zonaRebote.actualizarPantalla();
+		zonaRebote.updateUI();
 		
 		
 

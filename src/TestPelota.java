@@ -1,10 +1,7 @@
 
-
 import java.awt.geom.*;
 
 import javax.swing.*;
-
-
 
 import java.util.*;
 import java.awt.*;
@@ -13,12 +10,12 @@ import java.awt.event.*;
 public class TestPelota {
 
 	public static void main(String[] args) {
-		//JFrame marco=new Ventana();
-		
-		//marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		//marco.setVisible(true);
-		
+		// JFrame marco=new Ventana();
+
+		// marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		// marco.setVisible(true);
+
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -31,11 +28,4 @@ public class TestPelota {
 		});
 	}
 
-	}
-
-
-
-
-
-
-
+}

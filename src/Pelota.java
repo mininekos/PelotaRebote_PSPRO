@@ -1,5 +1,4 @@
 
-
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
@@ -19,12 +18,10 @@ class Pelota {
 	private double avanceX = 1;
 
 	private double avanceY = 1;
-	
-	private Rectangle2D limites;
-	private  PanelRebote panelRebote ;
-	
 
-	
+	private Rectangle2D limites;
+	private PanelRebote panelRebote;
+
 	public Pelota(PanelRebote panelRebote) {
 		this.limites = panelRebote.getBounds();
 		this.panelRebote = panelRebote;
@@ -76,11 +73,9 @@ class Pelota {
 
 	}
 
-	public void paint ()
-	{ this.update();
-	  panelRebote.paint(panelRebote.getGraphics());
-		
+	public void paint() {
+		this.update();
+		panelRebote.paint(panelRebote.getGraphics());
 	}
-	
 
 }
